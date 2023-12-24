@@ -12,4 +12,10 @@ KM-Plotter is a webserver using gene expression and miRNA quantification express
 library(survival)
 library(ggplot2)
 library(ggsurvfit)
+
+# Reading the time-to-event data, extracted from KM-Plotter web server
+data = read.delim("C:/Users/sh/Downloads/Old Laptop/EPFL/KMPlotter Survival/KMPlotter AutoCutoff/Liv.txt",sep = '\t')
+data$Expression..1.high.[data$Expression..1.high.==0] = "Low Basophil"
+data$Expression..1.high.[data$Expression..1.high.==1] = "High Basophil"
+
 ```
